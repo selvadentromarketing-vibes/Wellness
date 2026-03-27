@@ -36,14 +36,15 @@ const translations = {
     'manifesto.cta': 'Descubre la solución',
     
     // Blue Zones
-    'bluezones.headline': 'Las Blue Zones tienen la clave',
-    'bluezones.body': 'En Okinawa, Cerdeña, Ikaria y Nicoya, las personas viven más tiempo y más saludables que en cualquier otro lugar del planeta.',
+    'bluezones.headline': 'Inspirados en las Blue Zones',
+    'bluezones.subtitle': 'Blue Zones — las regiones del mundo donde las personas viven más de 100 años',
+    'bluezones.body': 'En Okinawa, Cerdeña, Ikaria y Nicoya, las personas viven más tiempo y más saludables. Selvadentro aplica estos mismos principios en la selva de Tulum.',
     'bluezones.pillar1': 'Movimiento natural',
     'bluezones.pillar2': 'Alimentación consciente',
     'bluezones.pillar3': 'Conexión social',
     'bluezones.pillar4': 'Propósito de vida',
     'bluezones.pillar5': 'Contacto con la naturaleza',
-    'bluezones.cta': 'Selvadentro aplica estos principios a la selva de Tulum',
+    'bluezones.cta': 'Un desarrollo diseñado con la ciencia de la longevidad, integrado en la selva de Tulum',
     
     // Vision
     'vision.headline': 'Una comunidad diseñada para vivir mejor',
@@ -55,12 +56,13 @@ const translations = {
     
     // Architecture
     'architecture.headline': 'Tres visiones, una filosofía',
-    'architecture.studio1.name': 'JJF Arquitectos',
+    'architecture.studio1.name': 'JJF Creando',
     'architecture.studio1.desc': 'Arquitectura contemporánea integrada con el paisaje natural.',
     'architecture.studio2.name': 'Estudio AMA',
     'architecture.studio2.desc': 'Diseño de paisaje y experiencias espaciales que conectan.',
     'architecture.studio3.name': 'Maat Handasa',
     'architecture.studio3.desc': 'Arquitectura consciente enfocada en bienestar y armonía.',
+    'architecture.swipe': 'DESLIZA',
     
     // Wellness
     'wellness.headline': 'El bienestar es la base',
@@ -77,7 +79,8 @@ const translations = {
     'masterplan.area': 'Solo 35% edificable — baja densidad real',
     'masterplan.residences': '9 cenotes naturales',
     'masterplan.wellness': '15+ amenidades',
-    'masterplan.trails': 'Lotes desde 400 m²',
+    'masterplan.trails': 'Lotes desde 450 m²',
+    'masterplan.location': '103 hectáreas en la selva de Tulum — cerca del Tren Maya y el nuevo aeropuerto internacional',
     'masterplan.cta': 'Explorar el masterplan',
     
     // Gallery
@@ -94,19 +97,19 @@ const translations = {
     'investment.delivery': 'Financiamiento a 48 meses, 0% interés',
     'investment.residences': '9 cenotes naturales',
     'investment.priceLabel': 'Lotes desde',
-    'investment.price': '$67,500 USD',
+    'investment.price': '$70,000 USD',
     'investment.cta1': 'Reservar llamada',
     'investment.cta2': 'Agendar tour privado',
-    'investment.disclaimer': '+134% apreciación confirmada entre Fase 1 y Fase 4. Enganche mínimo del 20%.',
+    'investment.disclaimer': 'Precios en dólares americanos (USD). Sujetos a disponibilidad y fase de venta. +134% apreciación confirmada entre Fase 1 y Fase 4. Enganche mínimo del 20%.',
     
     // Testimonials
     'testimonials.headline': 'Lo que dicen quienes ya viven la experiencia',
-    'testimonials.quote1': 'Vine por la arquitectura. Me quedé por el ritmo.',
-    'testimonials.author1': 'María G., Residente',
-    'testimonials.quote2': 'Es el primer lugar donde mi rutina matutina se siente como medicina.',
-    'testimonials.author2': 'Carlos R., Residente',
-    'testimonials.quote3': 'La comunidad aquí no es una amenidad—es el diseño.',
-    'testimonials.author3': 'Ana L., Residente',
+    'testimonials.quote1': 'Buscábamos un lugar donde nuestros hijos crecieran conectados con la naturaleza. Selvadentro es exactamente eso.',
+    'testimonials.author1': 'Familia Rodríguez, Propietarios Fase 1',
+    'testimonials.quote2': 'La combinación de cenotes, selva preservada y arquitectura consciente no existe en ningún otro desarrollo en Tulum.',
+    'testimonials.author2': 'Inversionista, Ciudad de México',
+    'testimonials.quote3': 'Vine a conocer el proyecto y me quedé. El ritmo de vida aquí te cambia desde el primer día.',
+    'testimonials.author3': 'Propietario, Fase 2',
     
     // Final CTA
     'finalcta.headline': 'Tu viaje hacia el bienestar comienza aquí',
@@ -155,14 +158,15 @@ const translations = {
     'manifesto.cta': 'Discover the solution',
     
     // Blue Zones
-    'bluezones.headline': 'The Blue Zones hold the key',
-    'bluezones.body': 'In Okinawa, Sardinia, Ikaria, and Nicoya, people live longer and healthier than almost anywhere else on Earth.',
+    'bluezones.headline': 'Inspired by the Blue Zones',
+    'bluezones.subtitle': 'Blue Zones — the regions where people live beyond 100 years',
+    'bluezones.body': 'In Okinawa, Sardinia, Ikaria, and Nicoya, people live longer and healthier. Selvadentro applies these same principles in the Tulum jungle.',
     'bluezones.pillar1': 'Natural movement',
     'bluezones.pillar2': 'Conscious nutrition',
     'bluezones.pillar3': 'Social connection',
-    'bluezones.pillar4': 'Purpose',
-    'bluezones.pillar5': 'Nature contact',
-    'bluezones.cta': 'Selvadentro applies these principles to the Tulum jungle',
+    'bluezones.pillar4': 'Life purpose',
+    'bluezones.pillar5': 'Nature immersion',
+    'bluezones.cta': 'A development designed with the science of longevity, integrated into the Tulum jungle',
     
     // Vision
     'vision.headline': 'A community designed to live better',
@@ -174,12 +178,13 @@ const translations = {
     
     // Architecture
     'architecture.headline': 'Three visions, one philosophy',
-    'architecture.studio1.name': 'JJF Architects',
+    'architecture.studio1.name': 'JJF Creando',
     'architecture.studio1.desc': 'Contemporary architecture integrated with the natural landscape.',
     'architecture.studio2.name': 'Estudio AMA',
     'architecture.studio2.desc': 'Landscape design and spatial experiences that connect.',
     'architecture.studio3.name': 'Maat Handasa',
     'architecture.studio3.desc': 'Conscious architecture focused on wellness and harmony.',
+    'architecture.swipe': 'SWIPE',
     
     // Wellness
     'wellness.headline': 'Wellness is the foundation',
@@ -196,7 +201,8 @@ const translations = {
     'masterplan.area': 'Only 35% buildable — true low density',
     'masterplan.residences': '9 natural cenotes',
     'masterplan.wellness': '15+ amenities',
-    'masterplan.trails': 'Lots from 4,300 sqft',
+    'masterplan.trails': 'Lots from 4,800 sqft',
+    'masterplan.location': '103 hectares in the Tulum jungle — near the Tren Maya and the new international airport',
     'masterplan.cta': 'Explore the masterplan',
     
     // Gallery
@@ -213,19 +219,19 @@ const translations = {
     'investment.delivery': '48-month financing, 0% interest',
     'investment.residences': '9 natural cenotes',
     'investment.priceLabel': 'Lots from',
-    'investment.price': '$67,500 USD',
+    'investment.price': '$70,000 USD',
     'investment.cta1': 'Book a call',
     'investment.cta2': 'Schedule private tour',
-    'investment.disclaimer': '+134% confirmed appreciation from Phase 1 to Phase 4. 20% minimum down payment.',
+    'investment.disclaimer': 'Prices in US dollars (USD). Subject to availability and sales phase. +134% confirmed appreciation from Phase 1 to Phase 4. 20% minimum down payment.',
     
     // Testimonials
-    'testimonials.headline': 'What those who already live the experience say',
-    'testimonials.quote1': 'I came for the architecture. I stayed for the rhythm.',
-    'testimonials.author1': 'María G., Resident',
-    'testimonials.quote2': "It's the first place where my morning routine feels like medicine.",
-    'testimonials.author2': 'Carlos R., Resident',
-    'testimonials.quote3': 'Community here is not an amenity—it is the design.',
-    'testimonials.author3': 'Ana L., Resident',
+    'testimonials.headline': 'What our owners say',
+    'testimonials.quote1': 'We were looking for a place where our children could grow up connected to nature. Selvadentro is exactly that.',
+    'testimonials.author1': 'Rodríguez Family, Phase 1 Owners',
+    'testimonials.quote2': 'The combination of cenotes, preserved jungle, and conscious architecture doesn\'t exist in any other development in Tulum.',
+    'testimonials.author2': 'Investor, Mexico City',
+    'testimonials.quote3': 'I came to see the project and I stayed. The rhythm of life here changes you from day one.',
+    'testimonials.author3': 'Owner, Phase 2',
     
     // Final CTA
     'finalcta.headline': 'Your journey into wellness begins here',

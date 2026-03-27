@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -42,6 +42,9 @@
     @apply bg-marfil text-negro-suave antialiased;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -288,6 +291,22 @@
 ::selection {
   background: var(--selva-light);
   color: var(--marfil);
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Safe area insets for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* Mobile touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  .btn-primary, .btn-secondary { min-height: 48px; }
+  .card-hover:hover { transform: none; }
+  .img-zoom:hover img { transform: none; }
 }
 
 /* Reduced motion */

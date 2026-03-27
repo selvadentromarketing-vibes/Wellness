@@ -5,30 +5,39 @@ export default function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative w-full h-screen bg-negro-suave overflow-hidden">
+    <section className="relative w-full h-[100svh] bg-negro-suave overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero_cenote.jpg"
+          src="/images/cenote_mirador.jpg"
           alt="Selva y cenote"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-6">
-        <h1 className="font-display text-display-1 max-w-4xl mb-6">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-5 md:px-6">
+        <h1 className="font-display text-display-1 max-w-4xl mb-4 md:mb-6">
           {t('hero.headline')}
         </h1>
 
-        <p className="text-body-lg text-white/80 mb-12">
+        <p className="text-body-lg text-white/80 mb-8 md:mb-12">
           {t('hero.subheadline')}
         </p>
+
+        {/* Mobile CTA */}
+        <a
+          href="#contact"
+          className="md:hidden btn-primary mb-8"
+        >
+          {t('nav.cta')}
+        </a>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2">
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2">
         <span className="text-micro">{t('hero.scroll')}</span>
         <div className="animate-bounce-slow">
           <ChevronDown size={24} />

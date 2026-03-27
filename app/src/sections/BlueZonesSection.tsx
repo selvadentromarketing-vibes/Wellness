@@ -18,36 +18,44 @@ export default function BlueZonesSection() {
     <section
       ref={sectionRef}
       id="bluezones"
-      className="relative min-h-screen flex items-center justify-center py-24"
+      className="relative min-h-screen flex items-center justify-center py-16 md:py-24"
     >
       <div className="absolute inset-0">
         <img
-          src="/images/blue_zones.jpg"
+          src="/images/pabellon_holistico.jpg"
           alt="Blue Zones lifestyle"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
-        <h2 className="reveal font-display text-display-2 mb-6">
+      <div className="relative z-10 text-center text-white px-5 md:px-6 max-w-5xl mx-auto">
+        <h2 className="reveal font-display text-display-2 mb-4">
           {t('bluezones.headline')}
         </h2>
 
-        <p className="reveal text-body-lg text-white/80 mb-16 max-w-2xl mx-auto">
+        <p className="reveal text-body text-white/60 italic mb-6 md:mb-8">
+          {t('bluezones.subtitle')}
+        </p>
+
+        <p className="reveal text-body-lg text-white/80 mb-10 md:mb-16 max-w-2xl mx-auto">
           {t('bluezones.body')}
         </p>
 
-        <div className="reveal grid grid-cols-2 md:grid-cols-5 gap-6 mb-16">
+        {/* 2-col on mobile, 5-col on desktop */}
+        <div className="reveal grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-6 mb-10 md:mb-16">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={index}
-                className="flex flex-col items-center gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 hover:-translate-y-1"
+                className={`flex flex-col items-center gap-3 p-4 md:p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 ${
+                  index === 4 ? 'col-span-2 sm:col-span-1 mx-auto w-full max-w-[200px] sm:max-w-none' : ''
+                }`}
               >
-                <Icon size={32} strokeWidth={1.5} />
-                <span className="text-micro">{t(pillar.key)}</span>
+                <Icon size={28} strokeWidth={1.5} className="md:w-8 md:h-8" />
+                <span className="text-micro text-[10px] md:text-[11px]">{t(pillar.key)}</span>
               </div>
             );
           })}
