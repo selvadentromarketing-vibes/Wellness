@@ -37,7 +37,7 @@ export default function ProblemSection() {
 
             <a
               href="#bluezones"
-              className="reveal link-underline text-micro text-negro-suave hover:text-cenote transition-colors"
+              className="reveal inline-block btn-primary cta-pulse"
             >
               {t('manifesto.cta')}
             </a>

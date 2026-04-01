@@ -55,13 +55,13 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="w-full flex-shrink-0">
                 <div className="flex flex-col items-center text-center px-2 md:px-4">
-                  <Quote size={36} className="text-cenote mb-6 md:mb-8 md:w-12 md:h-12" strokeWidth={1} />
+                  <Quote size={36} className="text-accent-gold mb-6 md:mb-8 md:w-12 md:h-12" strokeWidth={1} />
                   <blockquote className="font-display text-xl sm:text-2xl lg:text-3xl text-negro-suave mb-8 md:mb-10 max-w-2xl leading-snug">
                     "{t(testimonial.quote)}"
                   </blockquote>
                   <div className="flex items-center gap-3 md:gap-4">
-                    <div className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-cenote/20 flex items-center justify-center">
-                      <span className="font-display text-sm md:text-lg text-cenote">{testimonial.initials}</span>
+                    <div className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-accent-gold/20 flex items-center justify-center">
+                      <span className="font-display text-sm md:text-lg text-accent-gold">{testimonial.initials}</span>
                     </div>
                     <p className="text-micro text-[10px] md:text-[11px] text-gris-medio">{t(testimonial.author)}</p>
                   </div>
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
               aria-label={`Go to slide ${index + 1}`}
             >
               <span className={`block rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-cenote w-8 h-2' : 'bg-gris-claro hover:bg-gris-medio w-2 h-2'
+                index === currentSlide ? 'bg-accent-gold w-8 h-2' : 'bg-gris-claro hover:bg-gris-medio w-2 h-2'
               }`} />
             </button>
           ))}

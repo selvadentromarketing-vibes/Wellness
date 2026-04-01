@@ -51,7 +51,7 @@ export default function VisionSection() {
           })}
         </div>
 
-        <a href="#architecture" className="reveal inline-block btn-primary">
+        <a href="#architecture" className="reveal inline-block btn-primary cta-pulse">
           {t('vision.cta')}
         </a>
       </div>

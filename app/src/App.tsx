@@ -31,12 +31,12 @@ function App() {
           <HeroSection />
           <ProblemSection />
           <BlueZonesSection />
+          <InvestmentSection />
           <VisionSection />
           <ArchitectsSection />
           <WellnessSection />
           <MasterplanSection />
           <GallerySection />
-          <InvestmentSection />
           <TestimonialsSection />
           <FinalCTASection />
           <FooterSection />

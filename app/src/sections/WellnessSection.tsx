@@ -6,12 +6,12 @@ export default function WellnessSection() {
   const { t } = useLanguage();
 
   const experiences = [
-    { key: 'wellness.exp1', image: '/images/pabellon_holistico.jpg' },
-    { key: 'wellness.exp2', image: '/images/svd_render_03.jpg' },
-    { key: 'wellness.exp3', image: '/images/mirador_render.jpg' },
-    { key: 'wellness.exp4', image: '/images/cenote_mirador.jpg' },
-    { key: 'wellness.exp5', image: '/images/jungle_bar.jpg' },
-    { key: 'wellness.exp6', image: '/images/jungle_courts.jpg' },
+    { key: 'wellness.exp1', image: '/images/yoga_jungle.jpg' },
+    { key: 'wellness.exp2', image: '/images/jungle_canopy.jpg' },
+    { key: 'wellness.exp3', image: '/images/jungle_path.jpg' },
+    { key: 'wellness.exp4', image: '/images/gallery_cenote.jpg' },
+    { key: 'wellness.exp5', image: '/images/spa_render.jpg' },
+    { key: 'wellness.exp6', image: '/images/jungle_gym.jpg' },
   ];
 
   return (
@@ -47,6 +47,12 @@ export default function WellnessSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="reveal text-center mt-10 md:mt-14">
+          <a href="#contact" className="btn-primary cta-pulse">
+            {t('wellness.cta')}
+          </a>
         </div>
       </div>
     </section>

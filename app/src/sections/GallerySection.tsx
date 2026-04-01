@@ -5,35 +5,23 @@ import { X } from 'lucide-react';
 
 export default function GallerySection() {
   const sectionRef = useReveal();
-  const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const { t } = useLanguage();
 
-  const filters = [
-    { key: 'all', label: 'gallery.filter.all' },
-    { key: 'nature', label: 'gallery.filter.nature' },
-    { key: 'architecture', label: 'gallery.filter.architecture' },
-    { key: 'wellness', label: 'gallery.filter.wellness' },
-  ];
-
   const images = [
-    { src: '/images/cenote_mirador.jpg', category: 'nature', size: 'large' },
-    { src: '/images/svd_render_01.jpg', category: 'nature', size: 'small' },
-    { src: '/images/svd_render_03.jpg', category: 'nature', size: 'small' },
-    { src: '/images/svd_render_02.jpg', category: 'architecture', size: 'medium' },
-    { src: '/images/aerial_casa_cenotes.jpg', category: 'architecture', size: 'medium' },
-    { src: '/images/pabellon_holistico.jpg', category: 'wellness', size: 'small' },
-    { src: '/images/spa_render.jpg', category: 'wellness', size: 'small' },
-    { src: '/images/mirador_render.jpg', category: 'architecture', size: 'large' },
-    { src: '/images/jungle_gym.jpg', category: 'wellness', size: 'medium' },
-    { src: '/images/jungle_bar.jpg', category: 'nature', size: 'medium' },
-    { src: '/images/jungle_courts.jpg', category: 'wellness', size: 'small' },
-    { src: '/images/svd_render_05.jpg', category: 'nature', size: 'small' },
+    { src: '/images/cenote_mirador.jpg', label: 'gallery.img1', size: 'large' },
+    { src: '/images/svd_render_01.jpg', label: 'gallery.img2', size: 'small' },
+    { src: '/images/svd_render_03.jpg', label: 'gallery.img3', size: 'small' },
+    { src: '/images/svd_render_02.jpg', label: 'gallery.img4', size: 'medium' },
+    { src: '/images/aerial_casa_cenotes.jpg', label: 'gallery.img5', size: 'medium' },
+    { src: '/images/pabellon_holistico.jpg', label: 'gallery.img6', size: 'small' },
+    { src: '/images/spa_render.jpg', label: 'gallery.img7', size: 'small' },
+    { src: '/images/mirador_render.jpg', label: 'gallery.img8', size: 'large' },
+    { src: '/images/jungle_gym.jpg', label: 'gallery.img9', size: 'medium' },
+    { src: '/images/jungle_bar.jpg', label: 'gallery.img10', size: 'medium' },
+    { src: '/images/jungle_courts.jpg', label: 'gallery.img11', size: 'small' },
+    { src: '/images/svd_render_05.jpg', label: 'gallery.img12', size: 'small' },
   ];
-
-  const filteredImages = activeFilter === 'all'
-    ? images
-    : images.filter(img => img.category === activeFilter);
 
   return (
     <section
@@ -51,25 +39,8 @@ export default function GallerySection() {
           </p>
         </div>
 
-        {/* Horizontally scrollable filters on mobile */}
-        <div className="reveal flex overflow-x-auto gap-1 md:gap-4 mb-8 md:mb-12 md:justify-center pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
-          {filters.map((filter) => (
-            <button
-              key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className={`text-micro whitespace-nowrap px-4 py-2.5 min-h-[44px] transition-all duration-300 ${
-                activeFilter === filter.key
-                  ? 'text-negro-suave border-b-2 border-cenote'
-                  : 'text-gris-medio hover:text-negro-suave'
-              }`}
-            >
-              {t(filter.label)}
-            </button>
-          ))}
-        </div>
-
         <div className="columns-2 lg:columns-3 gap-3 md:gap-6 space-y-3 md:space-y-6">
-          {filteredImages.map((image, index) => (
+          {images.map((image, index) => (
             <div
               key={index}
               className={`reveal break-inside-avoid group relative overflow-hidden cursor-pointer rounded-lg ${
@@ -80,13 +51,24 @@ export default function GallerySection() {
             >
               <img
                 src={image.src}
-                alt={`Gallery ${index + 1}`}
+                alt={t(image.label) as string}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-5">
+                <span className="text-micro text-[9px] md:text-[11px] text-white">
+                  {t(image.label)}
+                </span>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="reveal text-center mt-10 md:mt-14">
+          <a href="#contact" className="btn-primary cta-pulse">
+            {t('gallery.cta')}
+          </a>
         </div>
       </div>
 
@@ -97,7 +79,7 @@ export default function GallerySection() {
           onClick={() => setLightboxImage(null)}
         >
           <button
-            className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-cenote transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-accent-gold transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setLightboxImage(null)}
           >
             <X size={28} />

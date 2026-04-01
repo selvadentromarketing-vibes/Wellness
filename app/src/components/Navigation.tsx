@@ -42,8 +42,8 @@ export default function Navigation() {
             className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img
-              src="/images/selvadentro-logo.webp"
-              alt="Selvadentro Tulum"
+              src={isScrolled ? '/images/selvadentro-logo.webp' : '/images/selvadentro-logo-cream.png'}
+              alt="Suspiro at Selvadentro"
               className="h-10 md:h-12 w-auto"
             />
           </a>
@@ -56,7 +56,7 @@ export default function Navigation() {
                 href={link.href}
                 className={`text-micro link-underline transition-colors ${
                   isScrolled
-                    ? 'text-negro-suave hover:text-cenote'
+                    ? 'text-negro-suave hover:text-accent-gold'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -91,10 +91,10 @@ export default function Navigation() {
             {/* CTA Button - Desktop */}
             <a
               href="#contact"
-              className={`hidden md:inline-flex text-micro px-6 py-3 transition-all duration-300 ${
+              className={`hidden md:inline-flex text-micro px-6 py-3 rounded-full transition-all duration-300 ${
                 isScrolled
                   ? 'btn-secondary'
-                  : 'border border-white/40 text-white hover:bg-white hover:text-negro-suave'
+                  : 'bg-accent-gold/90 text-selva-deep hover:bg-accent-gold'
               }`}
             >
               {t('nav.cta')}
@@ -126,7 +126,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="font-display text-3xl sm:text-4xl text-negro-suave hover:text-cenote transition-colors"
+              className="font-display text-3xl sm:text-4xl text-negro-suave hover:text-accent-gold transition-colors"
               style={{
                 transitionDelay: isMenuOpen ? `${index * 50}ms` : '0ms',
                 opacity: isMenuOpen ? 1 : 0,

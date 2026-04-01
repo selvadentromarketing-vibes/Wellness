@@ -46,7 +46,7 @@ export default function FinalCTASection() {
 
         {isSubmitted ? (
           <div className="reveal text-center text-white">
-            <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-5 md:mb-6 bg-cenote rounded-full flex items-center justify-center">
+            <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-5 md:mb-6 bg-accent-gold rounded-full flex items-center justify-center">
               <Check size={28} />
             </div>
             <p className="text-body-lg">{t('finalcta.note')}</p>
@@ -61,7 +61,7 @@ export default function FinalCTASection() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-cenote transition-colors min-h-[44px]"
+                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
               />
             </div>
 
@@ -73,7 +73,7 @@ export default function FinalCTASection() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-cenote transition-colors min-h-[44px]"
+                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
               />
             </div>
 
@@ -84,7 +84,7 @@ export default function FinalCTASection() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-cenote transition-colors min-h-[44px]"
+                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
               />
             </div>
 

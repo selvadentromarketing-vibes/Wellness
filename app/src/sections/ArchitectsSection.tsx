@@ -121,7 +121,7 @@ export default function ArchitectsSection() {
                 aria-label={`Go to slide ${index + 1}`}
               >
                 <span className={`block rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cenote w-8 h-2' : 'bg-gris-claro hover:bg-gris-medio w-2 h-2'
+                  index === currentSlide ? 'bg-accent-gold w-8 h-2' : 'bg-gris-claro hover:bg-gris-medio w-2 h-2'
                 }`} />
               </button>
             ))}

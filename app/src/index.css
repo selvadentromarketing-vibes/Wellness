@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,26 +6,29 @@
 
 @layer base {
   :root {
-    /* Primary Colors */
-    --selva-deep: #1F3D2B;
-    --selva-light: #5A7D63;
-    --cenote: #0FA3B1;
-    
+    /* Primary Colors — Brand Guide */
+    --selva-deep: #0B3A3A;
+    --selva-light: #1F5E4A;
+    --cenote: #2FA7A0;
+    --accent-gold: #C8A46B;
+    --accent-gold-light: #d4b27a;
+    --accent-gold-dark: #A88845;
+
     /* Secondary Colors */
-    --arena: #E8DCC8;
+    --arena: #E8DFC8;
     --piedra: #C9C4B8;
-    --marfil: #F7F5EF;
-    
+    --marfil: #F5F2EA;
+
     /* Neutrals */
     --negro-suave: #1A1A1A;
     --gris-medio: #6E7572;
     --gris-claro: #B8B8B8;
-    
+
     /* Legacy compatibility */
-    --background: 43 24% 95%;
-    --foreground: 140 24% 8%;
-    --primary: 160 32% 28%;
-    --accent: 174 68% 38%;
+    --background: 43 29% 94%;
+    --foreground: 168 55% 15%;
+    --primary: 158 52% 24%;
+    --accent: 40 42% 60%;
   }
 }
 
@@ -48,7 +51,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
   }
 }
@@ -56,7 +59,7 @@
 @layer components {
   /* Display Typography */
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
   }
   
   .font-body {
@@ -64,7 +67,7 @@
   }
   
   .text-display-1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(48px, 8vw, 72px);
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -72,7 +75,7 @@
   }
   
   .text-display-2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(36px, 5vw, 56px);
     line-height: 1.15;
     letter-spacing: -0.01em;
@@ -80,7 +83,7 @@
   }
   
   .text-display-3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(28px, 4vw, 42px);
     line-height: 1.2;
     font-weight: 500;
@@ -158,22 +161,29 @@
     @apply text-gris-medio hover:text-negro-suave;
   }
   
-  /* Button Styles */
+  /* Button Styles — Brand Guide */
   .btn-primary {
-    @apply inline-flex items-center justify-center bg-cenote text-white px-8 py-4 text-micro transition-all duration-300;
+    @apply inline-flex items-center justify-center px-8 py-4 text-micro rounded-full transition-all duration-300;
+    background-color: var(--accent-gold);
+    color: var(--selva-deep);
+    font-weight: 500;
   }
-  
+
   .btn-primary:hover {
-    @apply bg-selva-light;
+    background-color: var(--accent-gold-light);
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(200, 164, 107, 0.3);
   }
-  
+
   .btn-secondary {
-    @apply inline-flex items-center justify-center bg-transparent border border-negro-suave text-negro-suave px-8 py-4 text-micro transition-all duration-300;
+    @apply inline-flex items-center justify-center bg-transparent border px-8 py-4 text-micro rounded-full transition-all duration-300;
+    border-color: var(--selva-deep);
+    color: var(--selva-deep);
   }
-  
+
   .btn-secondary:hover {
-    @apply bg-negro-suave text-white;
+    background-color: var(--selva-deep);
+    color: var(--marfil);
   }
   
   /* Card Hover Effect */
@@ -223,6 +233,22 @@
     mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
+}
+
+/* CTA Pulse Animation — Brand Gold */
+@keyframes pulse-cta {
+  0%, 100% { box-shadow: 0 4px 20px rgba(200, 164, 107, 0.25); }
+  50% { box-shadow: 0 6px 36px rgba(200, 164, 107, 0.5); }
+}
+
+.cta-pulse {
+  animation: pulse-cta 2.8s ease-in-out infinite;
+}
+
+.cta-pulse:hover {
+  animation: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 164, 107, 0.4);
 }
 
 /* Reveal animations */
@@ -279,18 +305,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--selva-light);
+  background: var(--selva-deep);
+  opacity: 0.25;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--selva-deep);
+  opacity: 0.4;
 }
 
 /* Selection */
 ::selection {
-  background: var(--selva-light);
-  color: var(--marfil);
+  background: var(--accent-gold);
+  color: var(--selva-deep);
 }
 
 /* Scrollbar hide utility */

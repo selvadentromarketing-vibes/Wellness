@@ -61,9 +61,9 @@ export default function BlueZonesSection() {
           })}
         </div>
 
-        <p className="reveal text-body text-white/90">
+        <a href="#investment" className="reveal inline-block btn-primary cta-pulse">
           {t('bluezones.cta')}
-        </p>
+        </a>
       </div>
     </section>
   );

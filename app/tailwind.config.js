@@ -5,13 +5,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Selvadentro Brand Colors
-        'selva-deep': '#1F3D2B',
-        'selva-light': '#5A7D63',
-        'cenote': '#0FA3B1',
-        'arena': '#E8DCC8',
+        // Selvadentro Brand Colors — Brand Guide
+        'selva-deep': '#0B3A3A',
+        'selva-light': '#1F5E4A',
+        'cenote': '#2FA7A0',
+        'accent-gold': '#C8A46B',
+        'accent-gold-light': '#d4b27a',
+        'accent-gold-dark': '#A88845',
+        'arena': '#E8DFC8',
         'piedra': '#C9C4B8',
-        'marfil': '#F7F5EF',
+        'marfil': '#F5F2EA',
         'negro-suave': '#1A1A1A',
         'gris-medio': '#6E7572',
         'gris-claro': '#B8B8B8',
@@ -52,7 +55,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        'display': ['Playfair Display', 'serif'],
+        'display': ['Cormorant Garamond', 'serif'],
         'body': ['Inter', 'sans-serif'],
       },
       fontSize: {
