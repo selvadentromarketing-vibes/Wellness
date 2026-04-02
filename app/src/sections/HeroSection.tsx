@@ -9,8 +9,8 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero_cenote.jpg"
-          alt="Suspiro at Selvadentro — Tulum"
+          src="/images/hero_cenote.webp"
+          alt="Selvadentro Tulum cenote surrounded by lush jungle — Blue Zone wellness community"
           className="w-full h-full object-cover"
           fetchPriority="high"
         />

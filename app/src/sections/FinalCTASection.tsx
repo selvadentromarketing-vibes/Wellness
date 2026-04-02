@@ -5,21 +5,49 @@ import { Send, Check } from 'lucide-react';
 
 export default function FinalCTASection() {
   const sectionRef = useReveal();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', countryCode: '', phone: '', country: '', budget: '', timeline: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsLoading(false);
-    setIsSubmitted(true);
+    setSubmitError(false);
+
+    try {
+      const response = await fetch(
+        'https://services.leadconnectorhq.com/hooks/crN2IhAuOBAl7D8324yI/webhook-trigger/bf242f2c-7825-46ea-97d6-d7a05e7cd84d',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            full_name: formData.name,
+            email: formData.email,
+            phone: `${formData.countryCode} ${formData.phone}`.trim(),
+            country: formData.country,
+            budget: formData.budget,
+            investment_timeline: formData.timeline,
+            source: 'wellness-landing-page',
+          }),
+        }
+      );
+
+      if (!response.ok) throw new Error('Submit failed');
+
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', countryCode: '', phone: '', country: '', budget: '', timeline: '' });
+    } catch {
+      setSubmitError(true);
+      setTimeout(() => setSubmitError(false), 4000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -31,8 +59,8 @@ export default function FinalCTASection() {
     >
       <div className="absolute inset-0">
         <img
-          src="/images/svd_render_05.jpg"
-          alt="Selva atardecer"
+          src="/images/svd_render_05.webp"
+          alt="Selvadentro sunset jungle view — contact us for Blue Zone living in Tulum"
           className="w-full h-full object-cover"
           loading="lazy"
         />
@@ -79,13 +107,92 @@ export default function FinalCTASection() {
 
             <div className="reveal">
               <label className="text-micro text-white/70 block mb-2">{t('finalcta.phone')}</label>
+              <div className="flex gap-3">
+                <select
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleChange}
+                  required
+                  className="w-[110px] shrink-0 bg-transparent border-b border-white/30 py-3 text-white text-base focus:outline-none focus:border-accent-gold transition-colors min-h-[44px] [&>option]:text-black"
+                >
+                  <option value="" disabled>Code</option>
+                  <option value="+1">+1 US/CA</option>
+                  <option value="+52">+52 MX</option>
+                  <option value="+44">+44 UK</option>
+                  <option value="+34">+34 ES</option>
+                  <option value="+33">+33 FR</option>
+                  <option value="+49">+49 DE</option>
+                  <option value="+39">+39 IT</option>
+                  <option value="+55">+55 BR</option>
+                  <option value="+57">+57 CO</option>
+                  <option value="+54">+54 AR</option>
+                  <option value="+56">+56 CL</option>
+                  <option value="+51">+51 PE</option>
+                  <option value="+593">+593 EC</option>
+                  <option value="+61">+61 AU</option>
+                  <option value="+91">+91 IN</option>
+                  <option value="+81">+81 JP</option>
+                </select>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="555 123 4567"
+                  className="flex-1 bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
+                />
+              </div>
+            </div>
+
+            <div className="reveal">
+              <label className="text-micro text-white/70 block mb-2">
+                {language === 'es' ? 'País de residencia' : 'Country of residence'}
+              </label>
               <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
+                type="text"
+                name="country"
+                value={formData.country}
                 onChange={handleChange}
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
+                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
               />
+            </div>
+
+            <div className="reveal">
+              <label className="text-micro text-white/70 block mb-2">
+                {language === 'es' ? 'Presupuesto' : 'Budget'}
+              </label>
+              <select
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
+                required
+                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base focus:outline-none focus:border-accent-gold transition-colors min-h-[44px] [&>option]:text-black"
+              >
+                <option value="" disabled>{language === 'es' ? 'Selecciona un rango' : 'Select a range'}</option>
+                <option value="70k-100k">$70,000 – $100,000 USD</option>
+                <option value="100k-150k">$100,000 – $150,000 USD</option>
+                <option value="150k+">$150,000+ USD</option>
+              </select>
+            </div>
+
+            <div className="reveal">
+              <label className="text-micro text-white/70 block mb-2">
+                {language === 'es' ? 'Plazo de inversión' : 'Investment timeline'}
+              </label>
+              <select
+                name="timeline"
+                value={formData.timeline}
+                onChange={handleChange}
+                required
+                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base focus:outline-none focus:border-accent-gold transition-colors min-h-[44px] [&>option]:text-black"
+              >
+                <option value="" disabled>{language === 'es' ? 'Selecciona un plazo' : 'Select a timeline'}</option>
+                <option value="immediate">{language === 'es' ? 'Inmediato (1-3 meses)' : 'Immediate (1-3 months)'}</option>
+                <option value="short">{language === 'es' ? 'Corto plazo (3-6 meses)' : 'Short-term (3-6 months)'}</option>
+                <option value="medium">{language === 'es' ? 'Mediano plazo (6-12 meses)' : 'Medium-term (6-12 months)'}</option>
+                <option value="exploring">{language === 'es' ? 'Explorando opciones' : 'Just exploring'}</option>
+              </select>
             </div>
 
             <div className="reveal pt-4 md:pt-6">
@@ -104,6 +211,12 @@ export default function FinalCTASection() {
                 )}
               </button>
             </div>
+
+            {submitError && (
+              <p className="text-center text-sm text-red-400 mt-3">
+                Submission error. Please try again or contact us via WhatsApp.
+              </p>
+            )}
 
             <p className="reveal text-center text-micro text-white/60">
               {t('finalcta.note')}

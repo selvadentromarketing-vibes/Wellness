@@ -30,8 +30,8 @@ export default function MasterplanSection() {
           <div className="flex justify-center lg:justify-end">
           <div className="relative rounded-lg overflow-hidden shadow-xl w-[260px] md:w-[300px]">
             <img
-              src="/images/suspiro_render.png"
-              alt="Suspiro at Selvadentro"
+              src="/images/suspiro_render.webp"
+              alt="Residencia Suspiro 3D render — luxury jungle home at Selvadentro Tulum"
               className="w-full h-auto"
               loading="lazy"
             />
@@ -68,8 +68,8 @@ export default function MasterplanSection() {
           </p>
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/images/masterplan_full.jpg"
-              alt="Masterplan Selvadentro — 103 hectáreas"
+              src="/images/masterplan_full.webp"
+              alt="Selvadentro masterplan — 103-hectare wellness community layout in Tulum jungle"
               className="w-full h-auto"
               loading="lazy"
             />
@@ -83,8 +83,8 @@ export default function MasterplanSection() {
           </h3>
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/images/masterplan_map.jpg"
-              alt="Ubicación Selvadentro — Tulum, Quintana Roo"
+              src="/images/masterplan_map.webp"
+              alt="Selvadentro location map — Tulum, Quintana Roo, Mexico"
               className="w-full h-full object-cover"
               loading="lazy"
             />

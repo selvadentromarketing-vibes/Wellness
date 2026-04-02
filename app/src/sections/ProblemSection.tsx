@@ -14,8 +14,8 @@ export default function ProblemSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         <div className="reveal reveal-left relative h-[40vh] sm:h-[50vh] lg:h-auto overflow-hidden">
           <img
-            src="/images/svd_render_01.jpg"
-            alt="Selva densa"
+            src="/images/svd_render_01.webp"
+            alt="Selvadentro architectural render — jungle-integrated residential design in Tulum"
             className="w-full h-full object-cover"
             loading="lazy"
           />

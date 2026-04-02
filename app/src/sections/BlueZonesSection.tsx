@@ -22,8 +22,8 @@ export default function BlueZonesSection() {
     >
       <div className="absolute inset-0">
         <img
-          src="/images/pabellon_holistico.jpg"
-          alt="Blue Zones lifestyle"
+          src="/images/pabellon_holistico.webp"
+          alt="Holistic wellness pavilion at Selvadentro — Blue Zone inspired architecture in Tulum jungle"
           className="w-full h-full object-cover"
           loading="lazy"
         />

@@ -20,8 +20,8 @@ export default function VisionSection() {
     >
       <div className="absolute inset-0">
         <img
-          src="/images/aerial_casa_cenotes.jpg"
-          alt="Selvadentro masterplan"
+          src="/images/aerial_casa_cenotes.webp"
+          alt="Aerial view of Casa de los Cenotes at Selvadentro — private wellness community in Tulum"
           className="w-full h-full object-cover"
           loading="lazy"
         />

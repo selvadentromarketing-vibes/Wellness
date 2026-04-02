@@ -13,20 +13,20 @@ export default function ArchitectsSection() {
     {
       name: 'architecture.studio1.name',
       desc: 'architecture.studio1.desc',
-      image: '/images/svd_render_02.jpg',
-      logo: '/images/logo_jjf.png',
+      image: '/images/svd_render_02.webp',
+      logo: '/images/logo_jjf.webp',
     },
     {
       name: 'architecture.studio2.name',
       desc: 'architecture.studio2.desc',
-      image: '/images/mirador_render.jpg',
-      logo: '/images/logo_estudio_ama.png',
+      image: '/images/mirador_render.webp',
+      logo: '/images/logo_estudio_ama.webp',
     },
     {
       name: 'architecture.studio3.name',
       desc: 'architecture.studio3.desc',
-      image: '/images/spa_render.jpg',
-      logo: '/images/logo_maat_handasa.jpg',
+      image: '/images/spa_render.webp',
+      logo: '/images/logo_maat_handasa.webp',
     },
   ];
 

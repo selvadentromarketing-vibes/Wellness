@@ -9,18 +9,18 @@ export default function GallerySection() {
   const { t } = useLanguage();
 
   const images = [
-    { src: '/images/cenote_mirador.jpg', label: 'gallery.img1', size: 'large' },
-    { src: '/images/svd_render_01.jpg', label: 'gallery.img2', size: 'small' },
-    { src: '/images/svd_render_03.jpg', label: 'gallery.img3', size: 'small' },
-    { src: '/images/svd_render_02.jpg', label: 'gallery.img4', size: 'medium' },
-    { src: '/images/aerial_casa_cenotes.jpg', label: 'gallery.img5', size: 'medium' },
-    { src: '/images/pabellon_holistico.jpg', label: 'gallery.img6', size: 'small' },
-    { src: '/images/spa_render.jpg', label: 'gallery.img7', size: 'small' },
-    { src: '/images/mirador_render.jpg', label: 'gallery.img8', size: 'large' },
-    { src: '/images/jungle_gym.jpg', label: 'gallery.img9', size: 'medium' },
-    { src: '/images/jungle_bar.jpg', label: 'gallery.img10', size: 'medium' },
-    { src: '/images/jungle_courts.jpg', label: 'gallery.img11', size: 'small' },
-    { src: '/images/svd_render_05.jpg', label: 'gallery.img12', size: 'small' },
+    { src: '/images/cenote_mirador.webp', label: 'gallery.img1', size: 'large' },
+    { src: '/images/svd_render_01.webp', label: 'gallery.img2', size: 'small' },
+    { src: '/images/svd_render_03.webp', label: 'gallery.img3', size: 'small' },
+    { src: '/images/svd_render_02.webp', label: 'gallery.img4', size: 'medium' },
+    { src: '/images/aerial_casa_cenotes.webp', label: 'gallery.img5', size: 'medium' },
+    { src: '/images/pabellon_holistico.webp', label: 'gallery.img6', size: 'small' },
+    { src: '/images/spa_render.webp', label: 'gallery.img7', size: 'small' },
+    { src: '/images/mirador_render.webp', label: 'gallery.img8', size: 'large' },
+    { src: '/images/jungle_gym.webp', label: 'gallery.img9', size: 'medium' },
+    { src: '/images/jungle_bar.webp', label: 'gallery.img10', size: 'medium' },
+    { src: '/images/jungle_courts.webp', label: 'gallery.img11', size: 'small' },
+    { src: '/images/svd_render_05.webp', label: 'gallery.img12', size: 'small' },
   ];
 
   return (
@@ -86,7 +86,7 @@ export default function GallerySection() {
           </button>
           <img
             src={lightboxImage}
-            alt="Lightbox"
+            alt="Selvadentro gallery full-size view"
             className="max-w-full max-h-[85vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />

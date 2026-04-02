@@ -11,8 +11,8 @@ export default function FooterSection() {
           {/* Logo & Tagline */}
           <div className="flex items-center gap-4">
             <img
-              src="/images/selvadentro-logo-cream.png"
-              alt="Suspiro at Selvadentro"
+              src="/images/selvadentro-logo-cream.webp"
+              alt="Selvadentro Tulum logo — Blue Zone wellness community"
               className="h-10 md:h-12 w-auto opacity-80"
             />
             <div>

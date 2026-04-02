@@ -6,12 +6,12 @@ export default function WellnessSection() {
   const { t } = useLanguage();
 
   const experiences = [
-    { key: 'wellness.exp1', image: '/images/yoga_jungle.jpg' },
-    { key: 'wellness.exp2', image: '/images/jungle_canopy.jpg' },
-    { key: 'wellness.exp3', image: '/images/jungle_path.jpg' },
-    { key: 'wellness.exp4', image: '/images/gallery_cenote.jpg' },
-    { key: 'wellness.exp5', image: '/images/spa_render.jpg' },
-    { key: 'wellness.exp6', image: '/images/jungle_gym.jpg' },
+    { key: 'wellness.exp1', image: '/images/yoga_jungle.webp' },
+    { key: 'wellness.exp2', image: '/images/jungle_canopy.webp' },
+    { key: 'wellness.exp3', image: '/images/jungle_path.webp' },
+    { key: 'wellness.exp4', image: '/images/gallery_cenote.webp' },
+    { key: 'wellness.exp5', image: '/images/spa_render.webp' },
+    { key: 'wellness.exp6', image: '/images/jungle_gym.webp' },
   ];
 
   return (

@@ -38,20 +38,20 @@ const translations = {
     // Blue Zones
     'bluezones.headline': 'Inspirados en las Zonas Azules',
     'bluezones.subtitle': 'Zonas Azules — las regiones del mundo donde las personas viven más de 100 años',
-    'bluezones.body': 'En Okinawa, Cerdeña, Ikaria y Nicoya, las personas viven más tiempo y más saludables. Suspiro at Selvadentro aplica estos mismos principios en la selva de Tulum.',
+    'bluezones.body': 'En Okinawa, Cerdeña, Ikaria y Nicoya, las personas viven más tiempo y más saludables. Aplicamos estos mismos principios para crear una comunidad en la selva de Tulum.',
     'bluezones.pillar1': 'Movimiento natural',
     'bluezones.pillar2': 'Alimentación consciente',
     'bluezones.pillar3': 'Conexión social',
     'bluezones.pillar4': 'Propósito de vida',
     'bluezones.pillar5': 'Contacto con la naturaleza',
-    'bluezones.cta': 'Conoce cómo vivimos',
+    'bluezones.cta': 'Ver la inversión',
 
     // Vision
     'vision.headline': 'Una comunidad diseñada para vivir mejor',
-    'vision.body': 'Suspiro at Selvadentro integra arquitectura, naturaleza y bienestar en una experiencia de vida única. Aquí la selva no es decoración—es el centro del proyecto.',
+    'vision.body': 'Arquitectura, naturaleza y bienestar se fusionan en una experiencia de vida. Aquí la selva no es decoración — es el corazón de todo.',
     'vision.pillar1': 'Arquitectura consciente',
     'vision.pillar2': 'Naturaleza preservada',
-    'vision.pillar3': 'Bienestar integral',
+    'vision.pillar3': 'Bienestar holístico',
     'vision.cta': 'Conoce el proyecto',
 
     // Architecture
@@ -66,7 +66,7 @@ const translations = {
 
     // Wellness
     'wellness.headline': 'El bienestar es la base',
-    'wellness.body': 'Cada espacio en Suspiro at Selvadentro está diseñado para cultivar equilibrio entre mente, cuerpo y naturaleza.',
+    'wellness.body': 'Cada espacio está diseñado para cultivar equilibrio entre mente, cuerpo y naturaleza.',
     'wellness.exp1': 'Yoga al amanecer',
     'wellness.exp2': 'Meditación en la selva',
     'wellness.exp3': 'Senderos naturales',
@@ -86,7 +86,7 @@ const translations = {
     'masterplan.location': '103 hectáreas en la selva de Tulum — cerca del Tren Maya y el nuevo aeropuerto internacional',
     'masterplan.cta': 'Explorar el masterplan',
     'masterplan.cenotesHeadline': 'El Masterplan',
-    'masterplan.cenotesBody': '103 hectáreas de selva preservada con solo 35% de área edificable — diseñado para vivir en armonía con la naturaleza.',
+    'masterplan.cenotesBody': 'Selva preservada, cenotes naturales y densidad cuidada — cada detalle diseñado para vivir en armonía con la naturaleza.',
 
     // Gallery
     'gallery.headline': 'Un lugar para moverse, descansar y reconectar',
@@ -106,8 +106,8 @@ const translations = {
     'gallery.img12': 'Atardecer en la selva',
 
     // Investment
-    'investment.headline': 'Oportunidad única en Tulum',
-    'investment.body': 'Proyectos con cenotes naturales y grandes extensiones de selva son extremadamente escasos. Suspiro at Selvadentro representa una oportunidad única para formar parte de una comunidad diseñada para el futuro del bienestar.',
+    'investment.headline': 'Tu lote en la selva',
+    'investment.body': 'Desarrollos con cenotes naturales y vastas reservas de selva son excepcionalmente escasos. Esta es tu entrada a una comunidad construida para el futuro del bienestar.',
     'investment.lotSize': 'Desde 450 m²',
     'investment.lotSizeLabel': 'Tamaño de lote',
     'investment.delivery': 'Financiamiento a 48 meses, 0% interés',
@@ -175,20 +175,20 @@ const translations = {
     // Blue Zones
     'bluezones.headline': 'Inspired by the Blue Zones',
     'bluezones.subtitle': 'Blue Zones — the regions where people live beyond 100 years',
-    'bluezones.body': 'In Okinawa, Sardinia, Ikaria, and Nicoya, people live longer and healthier. Suspiro at Selvadentro applies these same principles in the Tulum jungle.',
+    'bluezones.body': 'In Okinawa, Sardinia, Ikaria, and Nicoya, people live longer and healthier. We applied these same principles to create a community in the Tulum jungle.',
     'bluezones.pillar1': 'Natural movement',
-    'bluezones.pillar2': 'Conscious nutrition',
+    'bluezones.pillar2': 'Mindful eating',
     'bluezones.pillar3': 'Social connection',
     'bluezones.pillar4': 'Life purpose',
     'bluezones.pillar5': 'Nature immersion',
-    'bluezones.cta': 'Discover how we live',
+    'bluezones.cta': 'See the investment',
 
     // Vision
     'vision.headline': 'A community designed to live better',
-    'vision.body': 'Suspiro at Selvadentro integrates architecture, nature, and wellness into a unique living experience. Here, the jungle is not decoration—it is the center of the project.',
+    'vision.body': 'Architecture, nature, and wellness merge into one living experience. Here, the jungle is not decoration — it is the heart of everything.',
     'vision.pillar1': 'Conscious architecture',
     'vision.pillar2': 'Preserved nature',
-    'vision.pillar3': 'Integral wellness',
+    'vision.pillar3': 'Holistic wellness',
     'vision.cta': 'Discover the project',
 
     // Architecture
@@ -203,7 +203,7 @@ const translations = {
 
     // Wellness
     'wellness.headline': 'Wellness is the foundation',
-    'wellness.body': 'Every space at Suspiro at Selvadentro is designed to cultivate balance between mind, body, and nature.',
+    'wellness.body': 'Every space is designed to cultivate balance between mind, body, and nature.',
     'wellness.exp1': 'Sunrise yoga',
     'wellness.exp2': 'Jungle meditation',
     'wellness.exp3': 'Natural trails',
@@ -223,7 +223,7 @@ const translations = {
     'masterplan.location': '103 hectares in the Tulum jungle — near the Tren Maya and the new international airport',
     'masterplan.cta': 'Explore the masterplan',
     'masterplan.cenotesHeadline': 'The Masterplan',
-    'masterplan.cenotesBody': '103 hectares of preserved jungle with only 35% buildable area — designed to live in harmony with nature.',
+    'masterplan.cenotesBody': 'Preserved jungle, natural cenotes, and thoughtful density — every detail designed for harmony with nature.',
 
     // Gallery
     'gallery.headline': 'A place to move, rest, and reconnect',
@@ -243,8 +243,8 @@ const translations = {
     'gallery.img12': 'Jungle sunset',
 
     // Investment
-    'investment.headline': 'A unique opportunity in Tulum',
-    'investment.body': 'Projects with natural cenotes and large jungle extensions are extremely rare. Suspiro at Selvadentro represents a unique opportunity to become part of a community designed for the future of wellness.',
+    'investment.headline': 'Own a piece of the jungle',
+    'investment.body': 'Developments with natural cenotes and vast jungle reserves are vanishingly rare. This is your entry point into a community built for the future of wellness.',
     'investment.lotSize': 'From 4,800 sqft',
     'investment.lotSizeLabel': 'Lot size',
     'investment.delivery': '48-month financing, 0% interest',
@@ -289,7 +289,7 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('es');
+  const [language, setLanguageState] = useState<Language>('en');
 
   const toggleLanguage = useCallback(() => {
     setLanguageState(prev => prev === 'es' ? 'en' : 'es');

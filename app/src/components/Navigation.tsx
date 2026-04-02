@@ -42,8 +42,8 @@ export default function Navigation() {
             className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img
-              src={isScrolled ? '/images/selvadentro-logo.webp' : '/images/selvadentro-logo-cream.png'}
-              alt="Suspiro at Selvadentro"
+              src={isScrolled ? '/images/selvadentro-logo.webp' : '/images/selvadentro-logo-cream.webp'}
+              alt="Selvadentro Tulum — Blue Zone wellness community logo"
               className="h-10 md:h-12 w-auto"
             />
           </a>
