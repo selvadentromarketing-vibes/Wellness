@@ -67,53 +67,53 @@ export default function FinalCTASection() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <div className="relative z-10 w-full max-w-md mx-auto px-5 md:px-6">
+      <div className="relative z-10 w-full max-w-lg mx-auto px-5 md:px-6">
         <h2 className="reveal font-display text-display-2 text-white text-center mb-8 md:mb-12">
           {t('finalcta.headline')}
         </h2>
 
         {isSubmitted ? (
-          <div className="reveal text-center text-white">
+          <div className="reveal text-center text-white bg-black/40 backdrop-blur-md rounded-2xl p-10 border border-white/10">
             <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-5 md:mb-6 bg-accent-gold rounded-full flex items-center justify-center">
               <Check size={28} />
             </div>
             <p className="text-body-lg">{t('finalcta.note')}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+          <form onSubmit={handleSubmit} className="bg-black/40 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/10 space-y-5 md:space-y-6">
             <div className="reveal">
-              <label className="text-micro text-white/70 block mb-2">{t('finalcta.name')}</label>
+              <label className="text-sm font-medium text-white/90 block mb-2">{t('finalcta.name')}</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px]"
               />
             </div>
 
             <div className="reveal">
-              <label className="text-micro text-white/70 block mb-2">{t('finalcta.email')}</label>
+              <label className="text-sm font-medium text-white/90 block mb-2">{t('finalcta.email')}</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/50 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px]"
               />
             </div>
 
             <div className="reveal">
-              <label className="text-micro text-white/70 block mb-2">{t('finalcta.phone')}</label>
+              <label className="text-sm font-medium text-white/90 block mb-2">{t('finalcta.phone')}</label>
               <div className="flex gap-3">
                 <select
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={handleChange}
                   required
-                  className="w-[110px] shrink-0 bg-transparent border-b border-white/30 py-3 text-white text-base focus:outline-none focus:border-accent-gold transition-colors min-h-[44px] [&>option]:text-black"
+                  className="w-[120px] shrink-0 bg-white/10 border border-white/20 rounded-lg px-3 py-3 text-white text-base focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px] [&>option]:text-black [&>option]:bg-white"
                 >
                   <option value="" disabled>Code</option>
                   <option value="+1">+1 US/CA</option>
@@ -140,13 +140,13 @@ export default function FinalCTASection() {
                   onChange={handleChange}
                   required
                   placeholder="555 123 4567"
-                  className="flex-1 bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
+                  className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px]"
                 />
               </div>
             </div>
 
             <div className="reveal">
-              <label className="text-micro text-white/70 block mb-2">
+              <label className="text-sm font-medium text-white/90 block mb-2">
                 {language === 'es' ? 'País de residencia' : 'Country of residence'}
               </label>
               <input
@@ -154,48 +154,50 @@ export default function FinalCTASection() {
                 name="country"
                 value={formData.country}
                 onChange={handleChange}
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold transition-colors min-h-[44px]"
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base placeholder-white/40 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px]"
               />
             </div>
 
-            <div className="reveal">
-              <label className="text-micro text-white/70 block mb-2">
-                {language === 'es' ? 'Presupuesto' : 'Budget'}
-              </label>
-              <select
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                required
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base focus:outline-none focus:border-accent-gold transition-colors min-h-[44px] [&>option]:text-black"
-              >
-                <option value="" disabled>{language === 'es' ? 'Selecciona un rango' : 'Select a range'}</option>
-                <option value="70k-100k">$70,000 – $100,000 USD</option>
-                <option value="100k-150k">$100,000 – $150,000 USD</option>
-                <option value="150k+">$150,000+ USD</option>
-              </select>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="reveal">
+                <label className="text-sm font-medium text-white/90 block mb-2">
+                  {language === 'es' ? 'Presupuesto' : 'Budget'}
+                </label>
+                <select
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px] [&>option]:text-black [&>option]:bg-white"
+                >
+                  <option value="" disabled>{language === 'es' ? 'Selecciona un rango' : 'Select a range'}</option>
+                  <option value="70k-100k">$70K – $100K USD</option>
+                  <option value="100k-150k">$100K – $150K USD</option>
+                  <option value="150k+">$150K+ USD</option>
+                </select>
+              </div>
+
+              <div className="reveal">
+                <label className="text-sm font-medium text-white/90 block mb-2">
+                  {language === 'es' ? 'Plazo de inversión' : 'Timeline'}
+                </label>
+                <select
+                  name="timeline"
+                  value={formData.timeline}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-colors min-h-[44px] [&>option]:text-black [&>option]:bg-white"
+                >
+                  <option value="" disabled>{language === 'es' ? 'Selecciona' : 'Select'}</option>
+                  <option value="immediate">{language === 'es' ? '1-3 meses' : '1-3 months'}</option>
+                  <option value="short">{language === 'es' ? '3-6 meses' : '3-6 months'}</option>
+                  <option value="medium">{language === 'es' ? '6-12 meses' : '6-12 months'}</option>
+                  <option value="exploring">{language === 'es' ? 'Explorando' : 'Just exploring'}</option>
+                </select>
+              </div>
             </div>
 
-            <div className="reveal">
-              <label className="text-micro text-white/70 block mb-2">
-                {language === 'es' ? 'Plazo de inversión' : 'Investment timeline'}
-              </label>
-              <select
-                name="timeline"
-                value={formData.timeline}
-                onChange={handleChange}
-                required
-                className="w-full bg-transparent border-b border-white/30 py-3 text-white text-base focus:outline-none focus:border-accent-gold transition-colors min-h-[44px] [&>option]:text-black"
-              >
-                <option value="" disabled>{language === 'es' ? 'Selecciona un plazo' : 'Select a timeline'}</option>
-                <option value="immediate">{language === 'es' ? 'Inmediato (1-3 meses)' : 'Immediate (1-3 months)'}</option>
-                <option value="short">{language === 'es' ? 'Corto plazo (3-6 meses)' : 'Short-term (3-6 months)'}</option>
-                <option value="medium">{language === 'es' ? 'Mediano plazo (6-12 meses)' : 'Medium-term (6-12 months)'}</option>
-                <option value="exploring">{language === 'es' ? 'Explorando opciones' : 'Just exploring'}</option>
-              </select>
-            </div>
-
-            <div className="reveal pt-4 md:pt-6">
+            <div className="reveal pt-2">
               <button
                 type="submit"
                 disabled={isLoading}
@@ -213,12 +215,12 @@ export default function FinalCTASection() {
             </div>
 
             {submitError && (
-              <p className="text-center text-sm text-red-400 mt-3">
+              <p className="text-center text-sm text-red-400">
                 Submission error. Please try again or contact us via WhatsApp.
               </p>
             )}
 
-            <p className="reveal text-center text-micro text-white/60">
+            <p className="reveal text-center text-xs text-white/50">
               {t('finalcta.note')}
             </p>
           </form>

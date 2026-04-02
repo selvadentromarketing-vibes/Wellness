@@ -12,7 +12,7 @@ interface LanguageContextType {
 const translations = {
   es: {
     // Navigation
-    'nav.logo': 'Suspiro at Selvadentro',
+    'nav.logo': 'Suspiro en Selvadentro',
     'nav.menu': 'Menú',
     'nav.close': 'Cerrar',
     'nav.project': 'El Proyecto',
@@ -26,7 +26,7 @@ const translations = {
 
     // Hero
     'hero.headline': 'Vive donde la longevidad comienza',
-    'hero.subheadline': 'Suspiro at Selvadentro — Tulum, México',
+    'hero.subheadline': 'Suspiro en Selvadentro — Tulum, México',
     'hero.scroll': 'Descubre más',
 
     // Manifesto (Problem Section)
@@ -77,7 +77,7 @@ const translations = {
 
     // Masterplan
     'masterplan.headline': 'Diseñado para respetar la selva',
-    'masterplan.suspiroLabel': 'Suspiro at Selvadentro',
+    'masterplan.suspiroLabel': 'Suspiro en Selvadentro',
     'masterplan.locationHeadline': 'La Ubicación',
     'masterplan.area': 'Solo 35% edificable — baja densidad real',
     'masterplan.residences': '9 cenotes naturales',
@@ -145,7 +145,7 @@ const translations = {
     'footer.location': 'Tulum, Quintana Roo, México',
     'footer.privacy': 'Aviso de Privacidad',
     'footer.terms': 'Términos y Condiciones',
-    'footer.copyright': '© 2026 Suspiro at Selvadentro. Todos los derechos reservados.',
+    'footer.copyright': '© 2026 Suspiro en Selvadentro. Todos los derechos reservados.',
   },
   en: {
     // Navigation

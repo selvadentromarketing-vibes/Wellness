@@ -16,7 +16,7 @@ export default function InvestmentSection() {
         <div className="reveal reveal-left relative h-[40vh] sm:h-[50vh] lg:h-auto overflow-hidden">
           <img
             src="/images/svd_phase_01.webp"
-            alt="Residencia Suspiro at Selvadentro — luxury jungle real estate investment in Tulum"
+            alt="Residencia Suspiro en Selvadentro — luxury jungle real estate investment in Tulum"
             className="w-full h-full object-cover"
             loading="lazy"
           />
